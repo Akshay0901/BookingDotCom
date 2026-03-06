@@ -5,7 +5,7 @@ Feature: Login
 
   @tag1
   Scenario: Login with Correct Credentials 
-  Given User is on Landing Page 
+  Given User is on Landing Page of BookingDotCom
   When user dismisses popup
   When user clicks Sign In
   When user enter username
