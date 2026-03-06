@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features={"src/test/resources/features/"},
 glue={"StepDefinitions"},
-tags="@tag1",
+tags="@BookingDotCom_Stays",
 dryRun =false,
 monochrome = true,
 plugin = {"pretty","html:target/HTMLReports.html",

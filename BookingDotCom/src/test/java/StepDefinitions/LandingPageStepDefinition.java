@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +10,7 @@ public class LandingPageStepDefinition {
 
 	LandingPageLocators landingPage = new LandingPageLocators();
 
-	@Given("^User is on Landing Page$")
+	@Given("^User is on Landing Page of BookingDotCom$")
 	public void launchSession() {
 		landingPage.launchSession("https://www.booking.com/");
 
@@ -30,8 +31,30 @@ public class LandingPageStepDefinition {
 
 	@When("^user dismisses popup$")
 	public void dismissPopup() {
-		landingPage.closePopup();
+		landingPage.closePopUp();
 
 	}
+	
+	@Then("^User can see Stays Service$")
+	public void VerifyStaysService(){
+		landingPage.VerifyStaysService();
+		
+	}
 
+	@Then("^User can see Flights Service$")
+	public void VerifyFlightsService(){
+		landingPage.VerifyFlightsService();
+		
+	}
+	
+	@And("^User click on Save 15% or more button$")
+		public void ClicksaveOnStaysOfferButton() {
+		landingPage.ClicksaveOnStaysOfferButton();
+	}
+	
+	
+	
+	
+	
+	
 }
